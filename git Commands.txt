@@ -1,0 +1,40 @@
+    Initialization and Configuration:
+        git init: Initialize a new Git repository in the current directory.
+        git config --global user.name "Your Name": Set your global Git username.
+        git config --global user.email "your.email@example.com": Set your global Git email.
+
+    Basic Workflow:
+        git status: Show the current status of the repository (untracked, modified, staged).
+        git add <file>: Add a specific file to the staging area.
+        git add .: Add all modified and new files to the staging area.
+        git commit -m "Your commit message": Commit staged changes with a descriptive message.
+        git commit -am "Your commit message": Add all modified files and commit (skips git add step).
+        git log: Show the commit history.
+
+    Branching and Merging:
+        git branch: List all branches in the repository.
+        git branch <branch_name>: Create a new branch.
+        git checkout <branch_name>: Switch to a different branch.
+        git checkout -b <branch_name>: Create and switch to a new branch in one step.
+        git merge <branch_name>: Merge changes from one branch into the current branch.
+
+    Remote Repositories:
+        git remote add origin <remote_repository_URL>: Add a remote repository.
+        git push -u origin <branch_name>: Push commits to a remote repository for the first time.
+        git push: Push commits to a remote repository.
+        git pull: Fetch and merge changes from a remote repository into the current branch.
+        git clone <repository_URL>: Clone a remote repository to your local machine.
+
+    Undoing Changes:
+        git reset HEAD <file>: Unstage a file from the staging area.
+        git checkout -- <file>: Discard changes in a specific file.
+        git reset --soft HEAD~1: Undo the last commit and keep changes staged.
+        git reset --mixed HEAD~1: Undo the last commit and unstage changes.
+        git reset --hard HEAD~1: Undo the last commit and discard all changes.
+
+    Tagging:
+        git tag <tag_name>: Create a lightweight tag.
+        git tag -a <tag_name> -m "Tag message": Create an annotated tag with a message.
+        git push origin <tag_name>: Push a tag to a remote repository.
+        git tag -d <tag_name>: Delete a tag locally.
+        git push origin --delete <tag_name>: Delete a tag from a remote repository.
