@@ -1,0 +1,211 @@
+
+REFERENCE TYPES
+
+These types are references to objects. They point to a memory location where the actual object resides. References types includes:
+1. Classes
+2. Interfaces
+3. Arrays
+
+Reference types are passed by reference
+
+ 	 object is stored in heap and reference is stored in stack 
+  		STACK		--------------------------->	HEAP
+  	 Employee emp;							empid  empname  salary
+  	 										 1      "NA"     0
+  	  REFERENCES								   OBJECT
+  																
+  	When we pass a reference to the method we are actually passing the reference copy of the object rather than the actual object 													 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Reference to Objects 
+
+When the object is created e.g,. Employee emp is the reference which is stored in the stack which is pointing to the object stored in heap, and the reference will be used 
+as the copy of the object.
+Actually behind the address of the object is encapsulated by the JVM is stored in the reference of the object which is e1
+Here encapsulated address is stored in the object reference and it using it, reference is accessing the object
+
+	indirect access through references 
+                         stack	--------------------------->	heap
+				                         ACCESS  																				  
+                           e1	---------------------->	  | empid  empname  salary|
+                           ^			METHODS			  |   1     "NA"      0   |
+ REFERENCE IS STORED IN e1 |		                      -------------------------
+  						encapsulate <------- JVM <------ 1000 <----- address
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+toString()
+
+• In Java, the Object class is the root of the class hierarchy. Every class in Java is a descendant of Object. If a
+class does not explicitly extend any other class, then by default, it implicitly extends Object.
+
+• The Object class defines several methods that are common to all objects in Java, such as toString(),
+equals(), hashCode(), getClass(), and finalize(), among others. These methods can be overridden by
+subclasses to provide specific implementations.
+
+• For example, the toString() method returns a string representation of the object. By default, it returns a
+string that consists of the class name followed by the "@" symbol and the object's hash code in
+hexadecimal. However, you can override this method in your own classes to provide a more meaningful
+string representation.
+		
+---------------------------------------------------------------------------------------------------------------------------------------------------
+this Keyword
+
+In Java, "this" serves as a reference to the current object instance.
+• "this" is a keyword that refers to “this” reference.
+• It's often used within a class's method or constructor to refer to the current object.
+"this" can be particularly useful in situations where there's a need to disambiguate
+between instance variables and parameters with the same name.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+GETTERS AND SETTERS
+
+• Getters and Setters functions are commonly referred to as accessor and mutator
+methods, respectively.
+• These methods are used to access and modify the private fields (variables) of a class
+while encapsulating the implementation details.
+• Getters:
+• Purpose: Getter methods are used to retrieve the value of a private field from an object. They
+provide read access to the fields.
+• Naming Convention: Typically, getter methods are named with the prefix "get" followed by the
+name of the field they access.
+• Return Type: Getters return the value of the field they are associated with.
+
+GETTER- GETTER IS USED TO RETRIEVE THE PRIVATE DATA FROM THE OBJECT WHILE ENCAPSULATING THE IMPLEMENTATION DETAILS. IT PROVIDES READ ACCESS TO THE FIELDS
+Getters:
+• Purpose: Getter methods are used to retrieve the value of a private field from an object. They
+provide read access to the fields.
+• Naming Convention: Typically, getter methods are named with the prefix "get" followed by the
+name of the field they access.
+• Return Type: Getters return the value of the field they are associated with.
+• EXAMPLE-:
+public int getAge()
+{
+return age;
+}
+
+SETTER- SETTER IS USED TO MODIFY THE PRIVATE FIELD IN AN OBJECT
+Setters:
+Purpose: Setter methods are used to modify the value of a private field in an object. They provide write
+access to the fields.
+Naming Convention: Usually, setter methods are named with the prefix "set" followed by the name of
+the field they modify.
+Parameters: Setters take one parameter, which is the new value to be assigned to the field.
+Example:
+public void setAge(int age)
+{
+this.age = age;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+STATIC MEMBERS
+
+• A static member belongs to the class itself rather than to instances of the class.
+• This means there is only one copy of a static member, regardless of how many instances of the class are
+created. All instances share the common value.
+• Static members can include variables, methods, and nested classes.
+• These are also known as class variables because they belong to the class, not to any particular instance of
+the class. You declare a static variable using the static keyword.
+• You can access the static variable using the class name.
+• Static variables are initialized only once, when the class is loaded into memory, before any objects of that
+class are created.
+• Initializing static member in constructor is not a good practice and may lead to unexpected behaviour.
+• We cannot use the this keyword with static members in Java
+
+STATIC METHODS
+
+• Static methods in Java belong to the class itself rather than to any particular instance of the class.
+• They can be invoked without the need for creating an instance of the class.
+• They can only access other static members of the class directly.
+• They cannot access instance variables or instance methods directly, but they can access them via an object
+reference if one is provided as a parameter.
+• They are not overridden in subclasses, meaning that if a subclass defines a static method with the same
+signature as a static method in its superclass, it hides the superclass method rather than overriding it.
+• They can be accessed even if no objects of the class have been instantiated.
+• They are typically used for operations that do not require access to instance-specific data, such as utility
+methods or factory methods.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+CONSTRUCTOR 
+
+//Default Constructor
+	// Constructor is a special method which is implicitly called whenever an object is created
+	// Constructor should be same as that of the class name because it will help the compiler to identify the constructor of the particular class
+	// Any task which is related to initialization of an object or any task when the student will click the submit the button after registration the object will be created which is called a startup
+	
+// Similarly Parameterized Constructor is a method but it needs to be explicitly called in order to invoke the parameterized Constructor
+
+Consider there are two Constructors created in the entity class-: DEFAULT, PARAMETERIZED constructor 
+0
+**if client invokes only the default constructor then 
+- the default constructor will be called 
+
+**if the client invokes or calls the parameterized constructor then
+- the parameterized constructor will be called
+ 
+**if the parameterized constructor or the default constructor is not present then
+- the JVM will generate its own default constructor 
+
+**if only parameterized constructor is present and client invoke default constructor then
+- the code will show an error
+
+**if only default constructor is present and the client invoke parameterized constructor then
+- the code show error
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+  PRITMITIVES VS REFERENCES
+  
+  FEATURE									PRIMTIVE TYPES										REFERENCE TYPES
+  
+  DATA STORAGE							Store actual data value e.g.,						Stores memory address(references)
+  											num = 10;										int[] arr = new int[5];
+  																					stack	--------------------------->    heap
+  																				int[] arr;								arr{1,2,3,4,5}; (object)
+  																				
+  																				
+  MEMORY LOCATION							Stored in stack					    object is stored in heap and refernce is stored in stack 
+  																				 STACK		--------------------------->	HEAP
+  																			Employee emp;							empid  empname  salary
+  																													  1      "NA"     0
+  																													  
+  DIRECT / INDIRECT ACCESS 			direct access to the data values					indirect access through references 
+  																				 stack		--------------------------->	heap
+																								ACCESS  																				  
+  																				  e1	---------------------->	  | empid  empname  salary|
+  																				  ^				METHODS			  |   1     "NA"      0   |
+  														REFERENCE IS STORED IN e1 |								  -------------------------
+  																				encapsulate <------- JVM <------ 1000 <----- address
+  																				
+  																				
+  DEFAULT VALUES 				default values assigned (eg., 0,false)							Default value is null
+  
+  
+  EXAMPLES							  INT,double, boolean, char							Classes, interface, arrays, strings
+  																								  
+  
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+If we want to work on the encapsulated object data it is compulsory to use encapsulated function to retrieve or access it.
+In short the encapsulated function residing in the same class as that of the encapsulated data must be used to access that private data members
+
+E.g.,
+
+	These are the encapsulated data members
+	data members
+	Encapsulated data
+	private int empid;
+	private String empname;
+	double salary; 
+	
+	
+	This is the encapsulated data which is needed to access the data members residing in the same class 
+	//	public void displayDetails()
+	//	{
+	//		System.out.println("Employee ID = " + empid +" Employee name - " + empname + " Employee Salary = " + salary);
+	//	}
+	
+	So to to sometimes there may be a need to get or set individual data in this case we will use getters and setters
+	
+	
+	// In order to access the data members, how will we access it, in order to access the encapsulated data members we will use encapsulated methods
+		// But to access only individual data member to get or set we will use getter and setter
+		 
