@@ -1,4 +1,12 @@
-    Initialization and Configuration:
+git status
+git add .
+git status
+git commit -m "Message"
+git add remote add <origin> <url>
+git push -u origin master/main
+git branch -a
+
+Initialization and Configuration:
         git init: Initialize a new Git repository in the current directory.
         git config --global user.name "Your Name": Set your global Git username.
         git config --global user.email "your.email@example.com": Set your global Git email.
