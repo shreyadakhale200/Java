@@ -9,6 +9,10 @@ public class Student {
 	//static member
 	private static String SchoolName = "Modern School";
 	
+	//Now we will auto increment the Roll no of the Student object by incrementing counter whenever the object will be created
+	//we will do it in parameterized constructor because of the above reasons
+	private static int count = 0;
+	
 	//default constructor
 	public Student()
 	{		
@@ -18,9 +22,10 @@ public class Student {
 	}
 	
 	//parameterized Constructor
-	public Student(int student_rollno, String student_name, int marks)
+	public Student(String student_name, int marks)
 	{
-		this.student_rollno = student_rollno;
+		count++;
+		student_rollno = count;
 		this.student_name = student_name;
 		this.marks = marks;
 	}
@@ -39,7 +44,5 @@ public class Student {
 	{
 		return "Student Roll No = " + student_rollno + " Student Name - " + student_name + " Student Marks = " + marks + " School Name - " + SchoolName;
 	}
-
-
 
 }
