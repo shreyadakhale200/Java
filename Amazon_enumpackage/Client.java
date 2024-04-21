@@ -1,4 +1,4 @@
-package enumpackage;
+package Amazon_enumpackage;
 
 public class Client {
 
