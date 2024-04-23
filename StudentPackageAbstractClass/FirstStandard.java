@@ -4,20 +4,27 @@ public class FirstStandard extends Student{
 	
 	public FirstStandard(int id,String name, float marks1, float marks2, float marks3, String Phone, String address, String Father, String Mother)
 	{
-		this.Address = address;
-		this.Phoneno = Phone;
-		this.Fathers_Name = Father;
-		this.Mothers_Name = Mother;
-		this.StudentId = id;
-		this.Name = name;
-		this.StudentMark1 = marks1;
-		StudentMark2 = marks2;
-		StudentMark3 = marks3;
+		super(id,name,marks1,marks2,marks3,Phone,address,Father,Mother);
+//		setStudentId(id);
+//		setName(name);
+//		setStudentMark1(marks3);
+//		setStudentMark2(marks2);
+//		setStudentMark3(marks3);
+//		setPhoneno(Phone);
+//		setAddress(address);
+//		setFathers_Name(Father);
+//		setMothers_Name(Mother);
+		
+	}
+	
+	public FirstStandard()
+	{
+		super();
 	}
 
 	@Override
 	public float CalculatePercentage() {
-		float total = StudentMark1 + StudentMark2 + StudentMark3;
+		float total = getStudentMark1() + getStudentMark2() + getStudentMark3();
 		float percentage = (total/300)*100;
 		return percentage;
 	}
@@ -27,9 +34,11 @@ public class FirstStandard extends Student{
 		return CalculatePercentage();
 	}
 	
+	
+	
 	public String toString()
 	{
-		return super.toString() + ", " + " Student Percentage = " + getCalculaterPercentage() + 
+		return super.toString() + ", " + " Student Percentage = " +  ", " + getCalculaterPercentage() + ", " +
 				super.StudentContactDetails();
 	}
 	

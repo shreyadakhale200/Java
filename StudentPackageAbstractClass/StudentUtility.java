@@ -46,5 +46,4 @@ public class StudentUtility {
 				System.out.println(s[i]);
 			}
 		}
-
 }
