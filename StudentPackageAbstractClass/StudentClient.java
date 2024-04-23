@@ -7,7 +7,7 @@ public class StudentClient {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		Student s1 = new FirstStandard(12,"srhe",98,76,87);
-		Student[] s = new FirstStandard[3];
+		Student[] s = new FirstStandard[1];
 		Scanner sc = new Scanner(System.in);
 		
 		while(true)
