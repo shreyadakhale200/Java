@@ -1,0 +1,28 @@
+Notes on Exception
+
+What is an exception ? 
+When an Error occurs during runtime is called exception.
+
+Why Exception Handling is necessary ?
+Exception Handling is necessary because an exception may cause a Program to abort in the middle which can,
+lead to abrupt the flow of program or it may indicate the program must be closed or perhaps the system must be shut down as well.
+1. To allow the continuation of java app , even in case of run time errors.
+2. Reduces the need for checking validation of ret types.
+3. Allows a Separation between business logic n error handling
+
+Checked vs Unchecked
+Compiler differentiates between checked and unchecked exceptions
+while JVM treats both same, Meaning if there is an unhandled checked or unchecked exception JVM aborts the code. 
+
+--> Compiler forces handling Of the checked exception And does not forces handling of the unchecked exceptions. 
+
+How to satisfy compiler for checked exceptions ?
+Add try catch Block
+use throws
+
+In summary, we use throw when we want to explicitly throw an exception to indicate an error or exceptional condition, whereas we use try-catch blocks to handle exceptions that are thrown within a block of code and to provide appropriate error handling or recovery mechanisms. Both are essential tools in Java exception handling, with throw being used for raising exceptions and try-catch for catching and handling them.
+Throw is used for raising the exception and try catch is used for handling them
+
+ 
+
+
