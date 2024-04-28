@@ -15,6 +15,7 @@ Compiler differentiates between checked and unchecked exceptions
 while JVM treats both same, Meaning if there is an unhandled checked or unchecked exception JVM aborts the code. 
 
 --> Compiler forces handling Of the checked exception And does not forces handling of the unchecked exceptions. 
+--> JVM forces handling of the unchecked exceptions
 
 How to satisfy compiler for checked exceptions ?
 Add try catch Block
