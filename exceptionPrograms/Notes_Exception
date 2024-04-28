@@ -24,6 +24,24 @@ use throws
 In summary, we use throw when we want to explicitly throw an exception to indicate an error or exceptional condition, whereas we use try-catch blocks to handle exceptions that are thrown within a block of code and to provide appropriate error handling or recovery mechanisms. Both are essential tools in Java exception handling, with throw being used for raising exceptions and try-catch for catching and handling them.
 Throw is used for raising the exception and try catch is used for handling them
 
+
+Throws														Throw
+
+1. 
+Keyword in Java for exception       keyword in Java for exception handling
+handling
+
+2.
+can only appear in Method             can only appear in Method definition
+declaration
+
+3.
+mandatory for unhandled    			Typically used for raising custom exceptions
+checked exceptions
+
+
+
+
  
 
 
